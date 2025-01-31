@@ -1,0 +1,92 @@
+body{
+    font-family: "dico-code-two", mono;
+    font-weight: 400;
+    font-style: normal;
+    text-transform:uppercase;
+}
+
+.title{
+    text-align: center;
+    font-size: 2vw;
+}
+
+.title:hover {
+    filter: drop-shadow(0px 0px 15px hotpink);
+    cursor:pointer;
+}
+
+
+.image-grid{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(3, auto);
+    gap: 10px; 
+    width: 80vw;
+    max-width: 1200px;
+}
+
+.grid-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.2s ease-in-out, filter 0.2s ease-in-out;
+    
+}
+
+/*On hover — images*/
+.grid-container img:hover {
+    transform: scale(1.5);
+    filter: drop-shadow(0px 0px 15px hotpink);
+    cursor:pointer;
+}
+
+/*On hover — buttons*/
+
+.overview:hover {
+    filter: drop-shadow(0px 0px 5px hotpink);
+    cursor:pointer;
+}
+
+.directory:hover {
+    filter: drop-shadow(0px 0px 5px hotpink);
+    cursor:pointer;
+}
+
+/* metadata box */
+.info-box{
+    float: left;
+    max-width: 15vw;
+    display:flex;
+    position:fixed;
+    padding: 20px;
+    margin-top: 35vh;
+    border:  none;
+}
+
+.info-box.show-border {
+    border: 2px black dotted; 
+}
+
+/*Scale container after "overview" is pressed*/
+
+
+#myPlot{
+    float: right;
+    max-width: 100vw;
+    max-height: 80vh;
+    display:none;
+}
+
+.gridContainer img {
+    transition: transform 0.3s ease;  /* Smooth transition for scaling */
+}
+
+.gridContainer img.scale-down {
+    transform: scale(0.2);  /* Scale down images to 50% of their original size */
+}
